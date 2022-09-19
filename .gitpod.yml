@@ -2,9 +2,9 @@ tasks:
   - name: First Running boot ;)
     command: |
       cd web3dev-Solidity_And_Smart_Contracts/meu-portal-tchauzinho/
-      yarn       
+      yarn
+      echo "Rodei 1º ;)"
       
-    command: echo "Rodei 1º ;)"
     openMode: split-right
     
 ports:
