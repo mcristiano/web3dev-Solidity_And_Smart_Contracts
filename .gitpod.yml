@@ -1,10 +1,11 @@
 tasks:
   - name: First Running boot ;)
-    command:
-      cd web3dev-Solidity_And_Smart_Contracts 
-      yarn 
-      sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --unattended"
+    init:
+      cd web3dev-Solidity_And_Smart_Contracts && yarn 
+      
+    command:    
       echo "Rodei 1º ;)"
+      
     openMode: split-right
     
 ports:
@@ -14,8 +15,4 @@ ports:
   - port: 3333
     onOpen: ignore
 
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed 's:env zsh::g' | sed 's:chsh -s .*$::g')"
-# curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh &&
-# sed -i.tmp 's:env zsh::g' install.sh &&
-# sed -i.tmp 's:chsh -s .*$::g' install.sh &&
-# sh install.sh &&
+# sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --unattended"
