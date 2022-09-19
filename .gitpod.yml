@@ -13,7 +13,7 @@ tasks:
     openMode: split-right
     
   - name: npx hardhat node server 
-    command: 
+    command: |
       cd meu-portal-tchauzinho    
       clear
       npx hardhat node    
