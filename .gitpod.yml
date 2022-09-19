@@ -6,7 +6,7 @@ tasks:
       pwd
       echo "------------------------------------------------------"
       cd meu-portal-tchauzinho
-      yarn --emoji true 2> >(grep -v warning 1>&2)
+      yarn --emoji true
       echo "------------------------------------------------------"
       echo "Fim script boot ;)"
       echo "------------------------------------------------------"
@@ -22,3 +22,4 @@ ports:
     onOpen: ignore
 
 # sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --unattended"
+# yarn --emoji true 2> >(grep -v warning 1>&2)
