@@ -1,8 +1,12 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: echo 'init script' # runs during prebuild
+  - before: unalias gp 
+  - init: unalias gp
 
   - name: Config 
+    command: unalias gp
+    
+  - name: Config1 
     command: unalias gp
     openMode: split-right
 
