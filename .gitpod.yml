@@ -10,9 +10,11 @@ tasks:
       echo "------------------------------------------------------"
       echo "Fim script boot ;)"
       echo "------------------------------------------------------"
-      
-      
     openMode: split-right
+    
+  - name: npx hardhat node server 
+    command: npx hardhat node
+    
     
 ports:
   - port: 3000
