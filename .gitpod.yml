@@ -2,10 +2,8 @@ tasks:
   - name: First Running boot ;)
     command:
       cd web3dev-Solidity_And_Smart_Contracts && yarn 
-      #alias ztheme="(){ export ZSH_THEME="$@" && source $ZSH/oh-my-zsh.sh }" &&
-      #ztheme bira &&     
       sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --unattended"
-      #echo "Rodei 1º ;)"
+      echo "Rodei 1º ;)"
       
     openMode: split-right
     
