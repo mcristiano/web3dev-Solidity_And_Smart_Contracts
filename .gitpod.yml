@@ -1,9 +1,9 @@
 tasks:
   - name: First Running boot ;)
-    init:
+    init: >
       cd web3dev-Solidity_And_Smart_Contracts && yarn 
       
-    command:    
+    command: |
       echo "Rodei 1º ;)"
       
     openMode: split-right
