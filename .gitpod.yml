@@ -12,10 +12,11 @@ tasks:
     command: |
       cd web3dev-Solidity_And_Smart_Contracts 
       yarn
-
+      
       alias ztheme='(){ export ZSH_THEME="$@" && source $ZSH/oh-my-zsh.sh }'
       ztheme bira
       clear
+      exit
     openMode: split-right
     
 ports:
