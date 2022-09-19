@@ -10,7 +10,6 @@ contract WavePortal {
       uint updatedDate;  
     }
 
-
     uint256 totalWaves;
     UpdateAt[] public updateAts;
 

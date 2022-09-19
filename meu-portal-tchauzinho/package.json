@@ -14,7 +14,10 @@
     "format": "prettier --check \"contracts/**/*.sol\" \"**/*.ts\" \"**/*.md\" \"**/*.yml\"",
     "test": "npx hardhat test",
     "coverage": "npm run build && npx hardhat coverage --temp artifacts --network coverage",
-    "exec": "npx hardhat run scripts/run.js"
+    "exec": "npx hardhat run scripts/run.js",
+
+    "deploy": "npx hardhat run scripts/deploy.js --network localhost"
+
   },
   "keywords": [],
   "author": "",
