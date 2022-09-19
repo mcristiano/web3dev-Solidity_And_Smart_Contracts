@@ -10,7 +10,8 @@ tasks:
     command: |
       cd web3dev-Solidity_And_Smart_Contracts 
       yarn
-      sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"      
+      sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+      exit
     openMode: split-right
       
   - name: Install 3
