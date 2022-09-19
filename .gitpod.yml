@@ -1,11 +1,12 @@
 tasks:
   - name: First Running boot ;)
     command: |
+      clear    
       echo "------------------------------------------------------"
       pwd
       echo "------------------------------------------------------"
       cd meu-portal-tchauzinho
-      yarn
+      yarn --no-node-version-check --emoji true 
       echo "------------------------------------------------------"
       echo "Fim script boot ;)"
       echo "------------------------------------------------------"
