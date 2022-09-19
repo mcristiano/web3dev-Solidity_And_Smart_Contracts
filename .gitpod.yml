@@ -14,9 +14,15 @@ tasks:
     
   - name: npx hardhat node server 
     command: |
+      clear    
+      echo "------------------------------------------------------"
+      pwd
+      echo "------------------------------------------------------"      
       cd meu-portal-tchauzinho    
-      clear
+      pwd            
       npx hardhat node    
+      
+    openMode: split-right
     
 ports:
   - port: 3000
