@@ -6,8 +6,8 @@ tasks:
       echo "------------------------------------------------------" &&
       echo "Fim script boot ;)" &&
       echo "------------------------------------------------------" &&
+      gp sync-done bundle &&
       clear      
-      gp sync-done bundle
     openMode: split-right
     
   - name: npx hardhat node server 
