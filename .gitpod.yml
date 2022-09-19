@@ -6,7 +6,7 @@ tasks:
       pwd
       echo "------------------------------------------------------"
       cd meu-portal-tchauzinho
-      yarn --no-node-version-check --emoji true 
+      yarn --silent --emoji true 2> >(grep -v warning 1>&2)
       echo "------------------------------------------------------"
       echo "Fim script boot ;)"
       echo "------------------------------------------------------"
