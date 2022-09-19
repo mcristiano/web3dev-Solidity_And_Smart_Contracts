@@ -1,10 +1,10 @@
 tasks:
   - name: First Running boot ;)
     command:
-      cd web3dev-Solidity_And_Smart_Contracts && yarn 
+      cd web3dev-Solidity_And_Smart_Contracts 
+      yarn 
       sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --unattended"
       echo "Rodei 1º ;)"
-      
     openMode: split-right
     
 ports:
