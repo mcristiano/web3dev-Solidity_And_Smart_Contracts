@@ -3,8 +3,7 @@ tasks:
     init: >      
       sudo apt install mc tmux fonts-firacode fonts-powerline -y &&
       gp sync-done bundle # 'bundle' is an arbitrary name
-
-openMode: split-right     
+    openMode: split-right     
 
   - name: Install 2 
     init: gp sync-await bundle
