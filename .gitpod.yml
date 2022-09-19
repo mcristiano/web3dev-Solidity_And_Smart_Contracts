@@ -1,9 +1,15 @@
 tasks:
   - name: First Running boot ;)
     command: |
-      cd web3dev-Solidity_And_Smart_Contracts/meu-portal-tchauzinho/
+      echo "------------------------------------------------------"
+      pwd
+      echo "------------------------------------------------------"
+      cd meu-portal-tchauzinho
       yarn
-      echo "Rodei 1º ;)"
+      echo "------------------------------------------------------"
+      echo "Fim script boot ;)"
+      echo "------------------------------------------------------"
+      
       
     openMode: split-right
     
