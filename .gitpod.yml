@@ -16,7 +16,6 @@ tasks:
       cd meu-portal-tchauzinho    
       clear    
       npx hardhat node          
-    openMode: split-right
     
 ports:
   - port: 3000-8545
