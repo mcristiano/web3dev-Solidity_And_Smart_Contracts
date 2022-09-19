@@ -2,18 +2,22 @@
 tasks:
   - before: unalias gp 
   - init: unalias gp
+    
 
   - name: Config 
-    command: |
-      unalias gp
+    command: unalias gp
+    openMode: split-right
+
 
   - name: Running yarn installs
     command: cd meu-portal-tchauzinho && yarn  
+    openMode: split-right
 
   - name: Set custom theme
     command: |
       alias ztheme='(){ export ZSH_THEME="$@" && source $ZSH/oh-my-zsh.sh }'
       ztheme bira
+    openMode: split-right
 
 
 #npm install 
@@ -21,7 +25,7 @@ tasks:
 # npm run configure-database
       
 
-    openMode: split-right
+    
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
