@@ -3,7 +3,21 @@ tasks:
   - init: echo 'init script' # runs during prebuild
 
   - name: Config 
-    command: unalias gp
+    command: |
+      unalias gp
+      cd meu-portal-tchauzinho && yarn  
+
+  - name: Set custom theme
+    command: |
+      alias ztheme='(){ export ZSH_THEME="$@" && source $ZSH/oh-my-zsh.sh }'
+      ztheme bira
+
+
+#npm install 
+
+# npm run configure-database
+      
+
     openMode: split-right
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
