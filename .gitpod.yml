@@ -1,12 +1,9 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - name: Boot
-    init: unalias gp
-    command: unalias gp
-    openMode: split-right
+  - init: echo 'init script' # runs during prebuild
+  - command: echo 'start script'
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
   - port: 3000
-  - port: 3030
     onOpen: open-preview
