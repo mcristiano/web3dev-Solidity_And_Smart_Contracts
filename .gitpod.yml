@@ -5,7 +5,9 @@ tasks:
   - name: Config 
     command: |
       unalias gp
-      cd meu-portal-tchauzinho && yarn  
+
+  - name: Running yarn installs
+    command: cd meu-portal-tchauzinho && yarn  
 
   - name: Set custom theme
     command: |
