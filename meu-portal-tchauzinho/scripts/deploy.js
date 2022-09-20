@@ -1,5 +1,5 @@
-const dotenv = require("dotenv");
-
+/* eslint-disable no-undef */
+/* eslint-disable no-process-exit */
 const main = async () => {
   const [deployer] = await hre.ethers.getSigners();
   const accountBalance = await deployer.getBalance();
@@ -13,9 +13,9 @@ const main = async () => {
 
   console.log("WavePortal address: ", portal.address);
 
-  console.log("---------------------------------------------------");
-  console.log(process.env.YOUR_ALCHEMY_API_URL);
-  console.log(process.env.PRIVATE_GOERLI_ACCOUNT_KEY);
+  // #console.log("---------------------------------------------------");
+  // console.log(process.env.ALCHEMY_PRIVATE_API_URL);
+  // console.log(process.env.PRIVATE_GOERLI_ACCOUNT_KEY);
 };
 
 const runMain = async () => {

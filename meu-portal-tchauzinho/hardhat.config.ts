@@ -28,10 +28,10 @@ const config: HardhatUserConfig = {
   solidity: "0.8.0",
   networks: {
     goerli: {
-      url: process.env.YOUR_ALCHEMY_API_URL || "",
+      url: process.env.ALCHEMY_API_URL || "",
       accounts:
-        process.env.PRIVATE_GOERLI_ACCOUNT_KEY !== undefined
-          ? [process.env.PRIVATE_GOERLI_ACCOUNT_KEY]
+        process.env.ALCHEMY_PRIVATE_ACCOUNT_KEY !== undefined
+          ? [process.env.ALCHEMY_PRIVATE_ACCOUNT_KEY]
           : [],
     },
 
