@@ -21,8 +21,8 @@ tasks:
   - name: npm run dev
     init: gp sync-await bundle # wait for the above 'init' to finish
     command: |
-      cd frontend
-      clear    
+      cd frontend 
+    
       npm run dev
 
   - name: npx hardhat node server 
@@ -41,6 +41,9 @@ ports:
     onOpen: ignore    
 
   - port: 443
+    onOpen: ignore
+
+  - port: 4443
     onOpen: ignore
     
   - port: 3333
