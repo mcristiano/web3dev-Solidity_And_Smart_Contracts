@@ -3,13 +3,26 @@ tasks:
     init: >
       cd meu-portal-tchauzinho &&
       yarn --emoji true &&
+      cd .. &&
+      cd frontend &&
+      yarn --emoji true &&
+
       echo "------------------------------------------------------" &&
       echo "Fim script boot ;)" &&
       echo "------------------------------------------------------" &&
+
       gp sync-done bundle &&
       clear      
     openMode: split-right
     
+  - name: npm run dev
+    init: gp sync-await bundle # wait for the above 'init' to finish
+    command: |
+      eval $(command gp env -e)
+      cd frontend
+      clear    
+      npm run dev
+
   - name: npx hardhat node server 
     init: gp sync-await bundle # wait for the above 'init' to finish
     command: |
@@ -17,9 +30,16 @@ tasks:
       cd meu-portal-tchauzinho    
       clear    
       npx hardhat node          
+
     
 ports:
-  - port: 3000-8545
+  - port: 3000
+    onOpen: open-preview
+
+  - port: 8545
+    onOpen: ignore    
+
+  - port: 443
     onOpen: ignore
     
   - port: 3333
