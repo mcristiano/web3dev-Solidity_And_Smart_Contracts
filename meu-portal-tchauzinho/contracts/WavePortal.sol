@@ -28,26 +28,29 @@ contract WavePortal {
      */
     Wave[] waves;
 
-    constructor() {
-        console.log("EU SOU UM CONTRATO INTELIGENTE. POG.");
+    constructor() payable {
+      console.log("Contrato no ar!");
     }
 
     /*
      * Você notará que eu mudei um pouco a função de tchauzinho e agora requer uma string chamada _message. Esta é a mensagem que o nosso usuário enviou pelo frontend!
      */
     function wave(string memory _message) public {
-        totalWaves += 1;
-        console.log("%s tchauzinhou com a mensagem %s", msg.sender, _message);
+    totalWaves += 1;
+    console.log("%s tchauzinhou!", msg.sender);
 
-        /*
-         * Aqui é onde eu efetivamenet armazeno o tchauzinho no array.
-         */
-        waves.push(Wave(msg.sender, _message, block.timestamp));
+    waves.push(Wave(msg.sender, _message, block.timestamp));
 
-        /*
-         * Eu adicionei algo novo aqui. Use o Google para tentar entender o que é e depois me conte o que aprendeu em #general-chill-chat
-         */
-        emit NewWave(msg.sender, block.timestamp, _message);
+    emit NewWave(msg.sender, block.timestamp, _message);
+
+    uint256 prizeAmount = 0.0001 ether;
+    require(
+        prizeAmount <= address(this).balance,
+        "Tentando sacar mais dinheiro que o contrato possui."
+    );
+    (bool success, ) = (msg.sender).call{value: prizeAmount}("");
+    
+    require(success, "Falhou em sacar dinheiro do contrato.");
     }
 
     /*
