@@ -11,14 +11,16 @@ tasks:
       echo "Fim script boot ;)" &&
       echo "------------------------------------------------------" &&
 
+      eval $(command gp env -e) &&
+
       gp sync-done bundle &&
-      clear      
+
+      clear
     openMode: split-right
     
   - name: npm run dev
     init: gp sync-await bundle # wait for the above 'init' to finish
     command: |
-      eval $(command gp env -e)
       cd frontend
       clear    
       npm run dev
@@ -26,7 +28,6 @@ tasks:
   - name: npx hardhat node server 
     init: gp sync-await bundle # wait for the above 'init' to finish
     command: |
-      eval $(command gp env -e)
       cd meu-portal-tchauzinho    
       clear    
       npx hardhat node          
