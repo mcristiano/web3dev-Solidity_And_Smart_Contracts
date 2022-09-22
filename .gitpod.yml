@@ -21,16 +21,15 @@ tasks:
   - name: npm run dev
     init: gp sync-await bundle # wait for the above 'init' to finish
     command: |
-      cd frontend 
-    
+      cd frontend    
       npm run dev
 
-  - name: npx hardhat node server 
-    init: gp sync-await bundle # wait for the above 'init' to finish
-    command: |
-      cd meu-portal-tchauzinho    
-      clear    
-      npx hardhat node          
+  # - name: npx hardhat node server 
+  #   init: gp sync-await bundle # wait for the above 'init' to finish
+  #   command: |
+  #     cd meu-portal-tchauzinho    
+  #     clear    
+  #     npx hardhat node          
 
     
 ports:
