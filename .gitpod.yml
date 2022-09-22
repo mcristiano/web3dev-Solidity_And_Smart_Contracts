@@ -24,12 +24,12 @@ tasks:
       cd frontend    
       npm run dev
 
-  # - name: npx hardhat node server 
-  #   init: gp sync-await bundle # wait for the above 'init' to finish
-  #   command: |
-  #     cd meu-portal-tchauzinho    
-  #     clear    
-  #     npx hardhat node          
+  - name: npx hardhat node server 
+    init: gp sync-await bundle # wait for the above 'init' to finish
+    command: |
+      cd meu-portal-tchauzinho    
+      clear    
+      npx hardhat node          
 
     
 ports:
@@ -49,14 +49,4 @@ ports:
     onOpen: ignore
     
     
-    command: |
-      clear    
-      echo "------------------------------------------------------"
-      pwd
-      echo "------------------------------------------------------"
-      cd meu-portal-tchauzinho
-      yarn --emoji true
-      echo "------------------------------------------------------"
-      echo "Fim script boot ;)"
-      echo "------------------------------------------------------"
-
+   
